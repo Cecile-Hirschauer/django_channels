@@ -19,6 +19,13 @@
     </div>
 
 <script>
+    var socket = new WebSocket('ws://127.0.0.1:8000/ws/jokes/');
+
+    socket.onmessage = function(event) {
+        var joke = event.data;
+
+        document.querySelector('#jokes').innerText = joke;
+    }
 </script>
 </body>
 </html>
