@@ -70,6 +70,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'jokes_project.wsgi.application'
 
+# Celery settings
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
