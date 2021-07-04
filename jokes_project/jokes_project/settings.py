@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'jokes'
 ]
 
@@ -69,6 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'jokes_project.wsgi.application'
+ASGI_APPLICATION = 'jokes_project.asgi.application'
 
 # Celery settings
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'

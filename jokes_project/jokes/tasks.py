@@ -2,7 +2,7 @@ import requests
 
 from celery import shared_task
 
-@shared_task(bind=True)
+@shared_task
 def get_joke():
     url = "http://api.icndb.com/jokes/random"
     response = requests.get(url).json()
